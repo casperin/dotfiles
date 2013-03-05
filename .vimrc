@@ -13,6 +13,7 @@ set ruler
 set number
 set showcmd
 
+" get pathogen and use it. There is no other way
 execute pathogen#infect()
 
 syntax on
@@ -42,11 +43,8 @@ set linebreak
 set fdm=indent
 set foldlevel=50
 
-" incremental search
-set incsearch
-
 " Don't highlight matching brackets
-let g:loaded_matchparen= 1 
+" let g:loaded_matchparen= 1 
 
 " recording
 map Q @q
@@ -86,13 +84,14 @@ set hlsearch                  " highlight the search
 " toggle search highlighting with F4
 nmap <F4> :set hls!<CR>
 
-" Tabbing
-map <C-u> :tabp<CR>
-map <C-i> :tabn<CR>
-map ,t :tabnew<CR>
+" tab navigation like firefox
+nnoremap H :tabprevious<CR>
+nnoremap L :tabnext<CR>
+nnoremap T :tabnew<CR>
 
 " navigating buffers
 map <tab> :e #<CR>
+map ,q :e #<CR>:bd #<CR>
 
 
 " navigating splits
@@ -108,10 +107,14 @@ map <C-n> :NERDTreeToggle<CR>
 map ,f ,,f
 map ,F ,,F
 map ,w ,,w
+map ,W ,,W
 
 "bufsurf -- https://github.com/ton/vim-bufsurf
-map <C-p> :BufSurfForward<CR>
-map <C-o> :BufSurfBack<CR>
+" map <C-p> :BufSurfForward<CR>
+" map <C-o> :BufSurfBack<CR>
 
 " ctrl p -- git://github.com/kien/ctrlp.vim.git
 :nmap <leader>b :CtrlPBuffer<CR>
+
+" highight current line and column
+:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
