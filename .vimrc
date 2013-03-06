@@ -21,7 +21,7 @@ syntax on
 set background=dark
 
 " turn on solarized colorscheme if it exists
-silent colorscheme solarized
+silent! colorscheme solarized
 
 
 let mapleader = ","
