@@ -84,7 +84,7 @@ set hlsearch                  " highlight the search
 " toggle search highlighting with F4
 nmap <F4> :set hls!<CR>
 
-" tab navigation like firefox
+" tabs (I use splits way more actually)
 nnoremap H :tabprevious<CR>
 nnoremap L :tabnext<CR>
 nnoremap T :tabnew<CR>
