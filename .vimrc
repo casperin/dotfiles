@@ -48,6 +48,7 @@ set linebreak
 " set folding to indent
 set fdm=indent
 set foldlevel=50
+map K za
 
 " Don't highlight matching brackets
 " let g:loaded_matchparen= 1 
